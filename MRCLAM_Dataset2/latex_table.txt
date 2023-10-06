@@ -1,0 +1,128 @@
+\begin{table}[htbp]
+\centering
+\begin{tabular}{|c|c|c|c|p{1cm}p{1cm}p{1cm}p{1cm}p{1cm}p{1cm}p{1cm}|}
+\hline
+A & B & C & D & \multicolumn{7}{|c|}{F}  \\ \hline
+\multirow{ 2}{*}{1} & 0 & 6 & 230 & 35 & 40 & 55 & 25 & 40 & 35 & \\
+& 1 & 5 & 195 & 25 & 50 & 35 & 40 & 45 &  &  \\ \hline
+\end{tabular}
+\caption{A test caption}
+\label{table2}
+\end{table}
+
+
+\begin{table}[htbp]
+\caption{A test caption}
+\begin{tabular}{|c|c||ccc|}
+\hline
+\multicolumn{2}{|c}{} & \multicolumn{3}{c|}{Avg. $L_2$ landmark pose error (m)}
+#Robots & Robot ID & No opt./sharing & opt. only & opt. + sharing \\
+\hline
+
+\multirow{1}{*}{1} & 1 & ? & 0.755 & - \\
+\hline
+\multirow{3}{*}{2} & 1 & ? & 0.755 & 1.034 \\
+	& 2 & ? & 1.360 & 0.900 \\
+	& Avg. & ? & 1.007 & 0.967 \\
+\hline
+\multirow{4}{*}{3} & 1 & ? & 0.755 & 0.471 \\
+	& 2 & ? & 1.360 & 0.558 \\
+	& 3 & ? & 0.375 & 0.471 \\
+	& Avg. & ? & 0.830 & 0.541 \\
+\hline
+\multirow{5}{*}{4} & 1 & ? & 0.755 & 0.471 \\
+	& 2 & ? & 1.360 & 0.691 \\
+	& 3 & ? & 0.375 & 0.601 \\
+	& 4 & ? & 1.703 & 0.710 \\
+	& Avg. & ? & 1.172 & 0.674 \\
+\hline
+\multirow{6}{*}{5} & 1 & ? & 0.755 & 0.403 \\
+	& 2 & ? & 1.360 & 0.691 \\
+	& 3 & ? & 0.375 & 0.601 \\
+	& 4 & ? & 1.703 & 0.710 \\
+	& 5 & ? & 0.619 & 0.374 \\
+	& Avg. & ? & 1.121 & 0.433 \\
+\end{tabular}
+\label{table2}
+\end{table}
+
+
+
+
+
+
+OLD:
+
+\begin{center}
+    \begin{table}[H]
+        \caption{Landmark pose error with noisy ground-truth robot poses}
+        \begin{tabular}{ |c|ccc|  }
+         \hline
+         & \multicolumn{3}{c|}{Avg. landmark pose error (m)} \\  
+         \hline
+         Number of Robots & No sharing/opt. & Opt. only & Opt. + sharing \\
+         \hline
+        	1 & 0.224 & \bfseries 0.0919 & \bfseries 0.0919 \\
+	2 & 0.256 & 0.0923 & \bfseries 0.0765 \\
+	3 & 0.278 & 0.103 & \bfseries 0.0867 \\
+	4 & 0.303 & 0.142 & \bfseries 0.0843 \\
+	5 & 0.330 & 0.141 & \bfseries 0.0832 \\
+         \hline
+        \end{tabular}
+        \label{table:landmarknoisy}
+    \end{table}
+    \begin{table}[H]
+        \caption{Robot pose error with noisy ground-truth robot poses}
+        \begin{tabular}{ |c|ccc|  }
+         \hline
+         & \multicolumn{3}{c|}{Avg. robot pose error (m)} \\  
+         \hline
+         Number of Robots & No sharing/opt. & Opt. only & Opt. + sharing \\
+         \hline
+        	1 & \bfseries 0.00624 &  0.0712 & - \\
+	2 & \bfseries0.00613 & 0.0881 & 0.0784 \\
+	3 & \bfseries0.00628 & 0.0894 & 0.0775 \\
+	4 & \bfseries0.00630 & 0.0913 & 0.0793 \\
+	5 & \bfseries0.00630 & 0.0855 & 0.0710 \\
+         \hline
+        \end{tabular}
+        \label{table:posenoisy}
+    \end{table}
+\end{center}
+
+\begin{table}[htbp]
+\caption{Landmark pose error with initial robot poses known}
+\begin{tabular}{|c|c||ccc|}
+\hline
+\multicolumn{2}{|c||}{} & \multicolumn{3}{c|}{Avg. $L_2$ landmark pose error (m)} \\
+\hline
+\# Robots & Robot ID & No opt./sharing & opt. only & opt. + sharing \\
+\hline
+
+\multirow{1}{*}{1} & 1 & 5.015 & 0.755 & - \\
+\hline
+\multirow{3}{*}{2} & 1 & 5.015 & 0.755 & 1.034 \\
+	& 2 & 3.647 & 1.360 & 0.900 \\
+	& \bfseries (Average) & 4.331 & 1.007 & 0.967 \\
+\hline
+\multirow{4}{*}{3} & 1 & 5.015 & 0.755 & 0.593 \\
+	& 2 & 3.647 & 1.360 & \bfseries 0.558 \\
+	& 3 & 2.541 & 0.375 & 0.471 \\ 
+	& \bfseries (Average) & 3.736 & 0.830 & 0.541 \\
+\hline
+\multirow{5}{*}{4} & 1 & 5.015 & 0.755 & 0.471 \\
+	& 2 & 3.647 & 1.360 & 0.691 \\
+	& 3 & 2.541 & 0.375 & 0.601 \\
+	& 4 & 2.810 & 1.703 & 0.710 \\
+	& \bfseries (Average) & 3.505 & 1.048 & 0.674 \\
+\hline
+\multirow{6}{*}{5} & 1 & 5.015 & 0.755 & \bfseries 0.403 \\
+	& 2 & 3.647 & 1.360 & 0.667 \\
+	& 3 & 2.541 & 0.375 & \bfseries 0.358 \\
+	& 4 & 2.810 & 1.703 & \bfseries 0.361 \\
+	& 5 & 0.808 & 0.619 & \bfseries 0.374 \\
+	&\bfseries (Average) & 2.966 & 0.962 & \bfseries 0.433 \\
+ \hline
+\end{tabular}
+\label{table2}
+\end{table}
